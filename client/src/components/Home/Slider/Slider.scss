@@ -1,0 +1,10 @@
+.carousel-indicators [data-bs-target] {
+    width: 10px;
+    height: 10px;    
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    border-radius: 7px;
+    background-color: rgb(223, 226, 226);
+}
+  

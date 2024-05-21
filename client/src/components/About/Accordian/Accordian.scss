@@ -1,0 +1,72 @@
+@import "../../../css-config/mixins.scss";
+
+.acc-wrapper {
+    // display: flex;
+    // height: 100vh;
+    // width: 100vw;
+    margin: 40px auto;
+    max-width: 1200px;
+
+    // align-items: center;
+    // flex-direction: column;
+    // gap: 20px;
+
+    @media only screen and (max-width: 1024px) {
+        margin: 40px;
+        width: 90%;
+    }
+
+    @media only screen and (max-width: 768px) {
+        margin: 23px;
+        width: 90%;
+    }
+
+    .faq-heading {
+        margin-bottom: 20px;
+        font-size: 18px;
+        font-weight: 500;
+        text-transform: uppercase;
+
+        @include md {
+            margin-bottom: 35px;
+            font-size: 24px;
+        }
+
+        &:after {
+            content: "";
+            display: block;
+            margin-top: 5px;
+            width: 50px;
+            height: 3px;
+            background-color: #8e2de2;
+
+            @include md {
+                margin-top: 10px;
+            }
+        }
+    }
+
+    .accordian {
+        max-width: 100%;
+
+        .item {
+            background: #d3e1ee;
+            margin-bottom: 10px;
+            padding: 10px 20px;
+
+            .title {
+                color: #000;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                cursor: pointer;
+            }
+
+            .acc-content {
+                color: #000;
+                height: auto;
+            }
+        }
+    }
+
+}

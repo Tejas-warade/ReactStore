@@ -1,0 +1,88 @@
+@import "../../css-config/mixins.scss";
+
+.about-container {
+    display: flex;
+    margin: 40px auto;
+    justify-content: center;
+    max-width: 1200px;
+
+    @media only screen and (max-width: 1024px) {
+        margin: 40px;
+        width: 90%;
+    }
+
+    @media only screen and (max-width: 768px) {
+        flex-direction: column;
+        margin: 23px;
+        width: 90%;
+    }
+
+    .left {
+        @include lg {
+            max-width: 50%;
+        }
+
+        .heading {
+            margin-bottom: 20px;
+            font-size: 18px;
+            font-weight: 500;
+            text-transform: uppercase;
+
+            @include md {
+                margin-bottom: 35px;
+                font-size: 24px;
+            }
+
+            &:after {
+                content: "";
+                display: block;
+                margin-top: 5px;
+                width: 50px;
+                height: 3px;
+                background-color: #8e2de2;
+
+                @include md {
+                    margin-top: 10px;
+                }
+            }
+        }
+
+        .desc {
+            font-weight: 400;
+
+            p {
+                margin-bottom: 7px;
+            }
+        }
+
+        .shop-btn {
+            text-transform: uppercase;
+            font-size: 13px;
+            font-weight: 500;
+            width: fit-content;
+            border: 2px solid black;
+            padding: 10px 20px;
+            transition: all ease 0.3s;
+            cursor: pointer;
+            margin-top: 20px;
+            background-color: #9cd3fd;
+            color: black;
+
+            &:hover {
+                opacity: 0.6;
+                font-size: 14px;
+            }
+        }
+    }
+
+    .right {
+        @include lg {
+            max-width: 50%;
+        }
+
+        img {
+            width: 100%;
+            border-radius: 7px;
+        }
+    }
+}
